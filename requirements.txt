@@ -1,3 +1,8 @@
 ultralytics
 opencv-python-headless
-numpy
+opencv-python
+onnx
+onnxruntime
+pyyaml
+onnxslim>=0.1.67
+onnxruntime-gpu
