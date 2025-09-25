@@ -8,6 +8,7 @@ import numpy as np
 import glob
 
 
+
 class YOLOv8DataReader(CalibrationDataReader):
     """
     ONNX 모델 양자화를 위한 보정 데이터 리더 클래스입니다.
@@ -81,6 +82,9 @@ def quantize_onnx_model(onnx_model_path, data_yaml_path, img_size=224):
         quant_format=onnxruntime.quantization.QuantFormat.QDQ,  # QDQ는 정확도, QOperator는 성능에 유리
         activation_type=QuantType.QInt8,
         weight_type=QuantType.QInt8,
+        per_channel=True,
+        reduce_range=True,
+        nodes_to_exclude=[],
     )
 
     print(f"INT8 양자화가 완료되었습니다. 모델이 '{quantized_output_path}'에 저장되었습니다.")
@@ -106,7 +110,7 @@ def run_yolov8_finetuning(data_yaml='./data/data.yaml'):
     model = YOLO('yolov8n.pt')
 
     # 모델 파인튜닝
-    results = model.train(data=data_yaml, imgsz=224, epochs=500, batch=16, name='yolov8n_finetune')
+    results = model.train(data=data_yaml, imgsz=224, epochs=500, batch=16, project='runs/detect', name='yolov8n_finetune', exist_ok=True)
     print("YOLOv8n 모델 파인튜닝이 완료되었습니다.")
 
     # 가장 성능 좋은 모델(.pt) 경로 저장
