@@ -110,7 +110,7 @@ def run_yolov8_finetuning(data_yaml='./data/data.yaml'):
     model = YOLO('yolov8n.pt')
 
     # 모델 파인튜닝
-    results = model.train(data=data_yaml, imgsz=224, epochs=500, batch=16, project='runs/detect', name='yolov8n_finetune', exist_ok=True)
+    results = model.train(data=data_yaml, imgsz=224, epochs=500, batch=16, project='../runs/detect', name='yolov8n_finetune', exist_ok=True)
     print("YOLOv8n 모델 파인튜닝이 완료되었습니다.")
 
     # 가장 성능 좋은 모델(.pt) 경로 저장
@@ -130,7 +130,7 @@ def run_yolov8_finetuning(data_yaml='./data/data.yaml'):
 
 
 if __name__ == '__main__':
-    DATASET_YAML_PATH = './data/data.yaml'
+    DATASET_YAML_PATH = '../data/data.yaml'
 
     # 함수로부터 세 개의 파일 경로를 반환받습니다.
     best_model_path, onnx_model_path, quantized_model_path = run_yolov8_finetuning(data_yaml=DATASET_YAML_PATH)
