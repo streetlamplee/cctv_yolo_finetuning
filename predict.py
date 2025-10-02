@@ -29,7 +29,7 @@ def main(image_path):
 
     # 2. YOLO 모델 로드
     try:
-        model = YOLO(model_path)
+        model = YOLO("/home/user/PycharmProjects/AutoEncoderYOLO/src/YOLO/runs/detect/yolov8n_finetune/weights/best.pt")
     except Exception as e:
         print(f"모델 로드 중 오류 발생: {e}")
         return
