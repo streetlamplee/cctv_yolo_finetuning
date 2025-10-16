@@ -1,0 +1,293 @@
+<?xml version="1.0" ?>
+<annotations>
+  <version>1.1</version>
+  <image id="0" name="10_2025_09_23__21_12_14.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="882.93" ytl="188.22" xbr="1036.67" ybr="436.82" z_order="0"/>
+  </image>
+  <image id="1" name="10_2025_09_25__01_50_03.jpg" width="1280" height="720"/>
+  <image id="2" name="10_2025_09_25__08_40_49.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="548.39" ytl="405.90" xbr="755.65" ybr="707.18" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="439.14" ytl="235.10" xbr="563.44" ybr="414.00" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="733.78" ytl="329.77" xbr="931.07" ybr="636.67" z_order="0"/>
+    <box label="sitting on chair" occluded="0" source="manual" xtl="827.78" ytl="113.83" xbr="908.09" ybr="259.10" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="892.92" ytl="293.41" xbr="1039.50" ybr="574.62" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="607.71" ytl="198.44" xbr="730.73" ybr="359.92" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="805.08" ytl="214.01" xbr="937.42" ybr="413.94" z_order="0"/>
+  </image>
+  <image id="3" name="10_2025_09_25__20_27_02.jpg" width="1280" height="720"/>
+  <image id="4" name="10_2025_09_26__00_52_29.jpg" width="1280" height="720"/>
+  <image id="5" name="10_2025_09_28__04_23_15.jpg" width="1280" height="720"/>
+  <image id="6" name="11_2025_09_23__20_02_02.jpg" width="1280" height="720"/>
+  <image id="7" name="11_2025_09_24__14_08_49.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="900.43" ytl="398.28" xbr="1081.74" ybr="720.00" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="1111.26" ytl="506.53" xbr="1274.88" ybr="720.00" z_order="0"/>
+    <box label="wheel chair" occluded="0" source="manual" xtl="1107.50" ytl="507.96" xbr="1275.76" ybr="720.00" z_order="0"/>
+  </image>
+  <image id="8" name="11_2025_09_26__11_33_42.jpg" width="1280" height="720">
+    <box label="wheel chair" occluded="0" source="manual" xtl="820.53" ytl="314.40" xbr="975.16" ybr="597.61" z_order="0"/>
+    <box label="wheel chair" occluded="0" source="manual" xtl="636.65" ytl="305.49" xbr="807.58" ybr="720.00" z_order="0"/>
+    <box label="wheel chair" occluded="0" source="manual" xtl="569.52" ytl="370.60" xbr="664.40" ybr="720.00" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="741.76" ytl="253.41" xbr="836.56" ybr="403.43" z_order="0"/>
+  </image>
+  <image id="9" name="11_2025_09_26__12_43_51.jpg" width="1280" height="720">
+    <box label="wheel chair" occluded="0" source="manual" xtl="832.07" ytl="322.22" xbr="981.25" ybr="601.47" z_order="0"/>
+    <box label="wheel chair" occluded="0" source="manual" xtl="431.21" ytl="441.30" xbr="611.12" ybr="720.00" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="638.58" ytl="375.47" xbr="785.90" ybr="720.00" z_order="0"/>
+    <box label="wheel chair" occluded="0" source="manual" xtl="636.80" ytl="378.43" xbr="783.19" ybr="720.00" z_order="0"/>
+    <box label="staff" occluded="0" source="manual" xtl="669.24" ytl="268.41" xbr="752.01" ybr="374.67" z_order="0"/>
+    <box label="wheel chair" occluded="0" source="manual" xtl="826.63" ytl="321.37" xbr="912.59" ybr="598.68" z_order="0"/>
+  </image>
+  <image id="10" name="11_2025_09_27__03_50_31.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="924.29" ytl="198.19" xbr="1027.87" ybr="484.20" z_order="0"/>
+  </image>
+  <image id="11" name="11_2025_09_27__08_05_58.jpg" width="1280" height="720">
+    <box label="wheel chair" occluded="0" source="manual" xtl="633.71" ytl="380.26" xbr="786.75" ybr="720.00" z_order="0"/>
+  </image>
+  <image id="12" name="11_2025_09_28__07_33_34.jpg" width="1280" height="720"/>
+  <image id="13" name="12_2025_09_24__01_47_39.jpg" width="1280" height="720"/>
+  <image id="14" name="12_2025_09_24__22_54_49.jpg" width="1280" height="720"/>
+  <image id="15" name="12_2025_09_26__00_12_26.jpg" width="1280" height="720"/>
+  <image id="16" name="12_2025_09_26__05_43_02.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="456.61" ytl="53.63" xbr="548.76" ybr="201.94" z_order="0"/>
+  </image>
+  <image id="17" name="12_2025_09_26__11_53_43.jpg" width="1280" height="720">
+    <box label="sitting on chair" occluded="0" source="manual" xtl="335.57" ytl="317.93" xbr="476.14" ybr="533.80" z_order="0"/>
+    <box label="sitting on chair" occluded="0" source="manual" xtl="699.13" ytl="560.16" xbr="896.67" ybr="720.00" z_order="0"/>
+    <box label="sitting on chair" occluded="0" source="manual" xtl="450.20" ytl="271.77" xbr="549.58" ybr="456.99" z_order="0"/>
+    <box label="standing" occluded="0" source="manual" xtl="823.16" ytl="138.84" xbr="901.88" ybr="396.84" z_order="0"/>
+    <box label="sitting on chair" occluded="0" source="manual" xtl="1040.22" ytl="588.22" xbr="1138.06" ybr="720.00" z_order="0"/>
+    <box label="sitting on chair" occluded="0" source="manual" xtl="279.45" ytl="269.84" xbr="360.84" ybr="345.82" z_order="0"/>
+    <box label="sitting on chair" occluded="0" source="manual" xtl="270.62" ytl="270.52" xbr="346.61" ybr="352.40" z_order="0"/>
+    <box label="sitting on chair" occluded="0" source="manual" xtl="0.00" ytl="492.27" xbr="52.38" ybr="676.89" z_order="0"/>
+    <box label="food tray" occluded="0" source="manual" xtl="887.50" ytl="663.63" xbr="1029.86" ybr="720.00" z_order="0"/>
+  </image>
+  <image id="18" name="12_2025_09_27__13_21_48.jpg" width="1280" height="720"/>
+  <image id="19" name="1_2025_09_26__00_17_23.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="1114.62" ytl="330.91" xbr="1199.46" ybr="400.01" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="710.46" ytl="111.51" xbr="787.43" ybr="183.72" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="679.50" ytl="109.97" xbr="783.92" ybr="208.44" z_order="0"/>
+  </image>
+  <image id="20" name="1_2025_09_26__11_03_34.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="274.31" ytl="332.76" xbr="605.88" ybr="720.00" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="748.07" ytl="166.15" xbr="839.99" ybr="244.56" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="713.62" ytl="163.53" xbr="844.40" ybr="246.88" z_order="0"/>
+  </image>
+  <image id="21" name="1_2025_09_26__16_09_13.jpg" width="1280" height="720">
+    <box label="standing" occluded="0" source="manual" xtl="479.66" ytl="150.87" xbr="668.69" ybr="516.97" z_order="0"/>
+  </image>
+  <image id="22" name="1_2025_09_27__08_56_03.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="751.12" ytl="154.97" xbr="826.80" ybr="277.42" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="1144.93" ytl="353.46" xbr="1208.84" ybr="420.41" z_order="0"/>
+  </image>
+  <image id="23" name="1_2025_09_28__06_48_29.jpg" width="1280" height="720"/>
+  <image id="24" name="2_2025_09_23__23_27_21.jpg" width="1280" height="720"/>
+  <image id="25" name="2_2025_09_25__04_45_34.jpg" width="1280" height="720"/>
+  <image id="26" name="2_2025_09_27__17_42_21.jpg" width="1280" height="720"/>
+  <image id="27" name="3_2025_09_23__18_41_57.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="172.81" ytl="286.55" xbr="341.34" ybr="500.42" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="497.44" ytl="87.74" xbr="569.38" ybr="144.56" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="499.04" ytl="85.09" xbr="674.84" ybr="156.94" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="497.94" ytl="83.36" xbr="715.50" ybr="180.72" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="176.06" ytl="301.00" xbr="402.66" ybr="470.10" z_order="0"/>
+  </image>
+  <image id="28" name="3_2025_09_24__09_53_29.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="507.38" ytl="80.39" xbr="646.03" ybr="146.90" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="161.61" ytl="273.62" xbr="289.48" ybr="308.74" z_order="0"/>
+  </image>
+  <image id="29" name="3_2025_09_24__21_39_45.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="142.31" ytl="297.07" xbr="244.45" ybr="385.45" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="507.66" ytl="72.56" xbr="903.20" ybr="280.96" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="510.16" ytl="67.49" xbr="591.66" ybr="135.72" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="139.94" ytl="296.96" xbr="257.65" ybr="412.14" z_order="0"/>
+  </image>
+  <image id="30" name="3_2025_09_25__10_46_18.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="314.92" ytl="122.24" xbr="516.47" ybr="501.18" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="526.83" ytl="55.10" xbr="647.47" ybr="123.51" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="545.22" ytl="52.85" xbr="649.24" ybr="112.39" z_order="0"/>
+  </image>
+  <image id="31" name="3_2025_09_26__00_37_47.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="126.02" ytl="260.85" xbr="278.90" ybr="375.42" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="497.47" ytl="112.54" xbr="649.43" ybr="210.64" z_order="0"/>
+  </image>
+  <image id="32" name="3_2025_09_26__04_33_11.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="498.85" ytl="103.01" xbr="648.37" ybr="211.17" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="141.49" ytl="276.03" xbr="220.33" ybr="332.22" z_order="0"/>
+  </image>
+  <image id="33" name="3_2025_09_26__08_08_39.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="522.54" ytl="71.71" xbr="676.83" ybr="142.15" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="148.01" ytl="265.66" xbr="309.36" ybr="354.79" z_order="0"/>
+  </image>
+  <image id="34" name="3_2025_09_27__00_20_33.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="138.48" ytl="318.08" xbr="343.51" ybr="452.29" z_order="0"/>
+  </image>
+  <image id="35" name="3_2025_09_27__09_21_35.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="240.15" ytl="40.24" xbr="409.72" ybr="367.97" z_order="0"/>
+  </image>
+  <image id="36" name="3_2025_09_27__09_56_38.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="531.43" ytl="49.44" xbr="670.14" ybr="245.10" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="172.12" ytl="272.67" xbr="259.78" ybr="328.10" z_order="0"/>
+  </image>
+  <image id="37" name="3_2025_09_27__10_11_40.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="513.63" ytl="54.37" xbr="674.43" ybr="228.86" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="148.92" ytl="271.60" xbr="244.59" ybr="331.75" z_order="0"/>
+  </image>
+  <image id="38" name="3_2025_09_27__15_02_10.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="510.73" ytl="51.66" xbr="637.90" ybr="143.28" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="508.01" ytl="51.81" xbr="646.68" ybr="206.71" z_order="0"/>
+  </image>
+  <image id="39" name="4_2025_09_23__19_27_00.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="73.18" ytl="312.07" xbr="163.39" ybr="366.90" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="471.56" ytl="80.72" xbr="622.65" ybr="194.99" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="76.80" ytl="299.92" xbr="174.83" ybr="367.21" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="468.87" ytl="82.19" xbr="569.38" ybr="167.52" z_order="0"/>
+  </image>
+  <image id="40" name="4_2025_09_24__07_28_08.jpg" width="1280" height="720">
+    <box label="sitting on bed" occluded="0" source="manual" xtl="593.92" ytl="22.89" xbr="741.43" ybr="201.71" z_order="0"/>
+  </image>
+  <image id="41" name="4_2025_09_24__18_19_17.jpg" width="1280" height="720">
+    <box label="staff" occluded="0" source="manual" xtl="627.01" ytl="51.00" xbr="824.99" ybr="525.54" z_order="0"/>
+    <box label="food tray" occluded="0" source="manual" xtl="757.73" ytl="161.68" xbr="883.04" ybr="246.86" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="519.31" ytl="60.50" xbr="657.80" ybr="130.66" z_order="0"/>
+  </image>
+  <image id="42" name="4_2025_09_25__02_10_07.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="499.56" ytl="83.95" xbr="647.17" ybr="159.68" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="48.22" ytl="373.02" xbr="102.95" ybr="425.51" z_order="0"/>
+  </image>
+  <image id="43" name="4_2025_09_26__12_33_57.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="544.01" ytl="64.08" xbr="725.89" ybr="187.06" z_order="0"/>
+  </image>
+  <image id="44" name="4_2025_09_27__16_52_10.jpg" width="1280" height="720"/>
+  <image id="45" name="4_2025_09_27__21_22_40.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="62.30" ytl="327.31" xbr="304.91" ybr="626.70" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="505.76" ytl="70.69" xbr="570.53" ybr="122.17" z_order="0"/>
+  </image>
+  <image id="46" name="4_2025_09_28__02_08_15.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="503.27" ytl="74.11" xbr="568.96" ybr="126.13" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="62.11" ytl="344.45" xbr="145.02" ybr="412.36" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="503.77" ytl="72.65" xbr="633.95" ybr="150.97" z_order="0"/>
+  </image>
+  <image id="47" name="5_2025_09_24__03_27_48.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="646.44" ytl="104.78" xbr="1016.59" ybr="347.87" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="1155.11" ytl="472.92" xbr="1280.00" ybr="702.54" z_order="0"/>
+  </image>
+  <image id="48" name="5_2025_09_25__02_40_10.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="933.43" ytl="432.03" xbr="1279.63" ybr="710.16" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="897.48" ytl="89.05" xbr="966.74" ybr="140.74" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="875.27" ytl="86.11" xbr="965.66" ybr="143.05" z_order="0"/>
+  </image>
+  <image id="49" name="5_2025_09_26__12_18_49.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="833.45" ytl="506.92" xbr="1275.37" ybr="720.00" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="927.41" ytl="116.61" xbr="992.89" ybr="189.63" z_order="0"/>
+  </image>
+  <image id="50" name="5_2025_09_27__04_25_34.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="904.66" ytl="81.37" xbr="945.91" ybr="129.31" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="1150.31" ytl="473.45" xbr="1280.00" ybr="720.00" z_order="0"/>
+  </image>
+  <image id="51" name="5_2025_09_27__06_05_46.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="800.68" ytl="83.60" xbr="947.62" ybr="136.79" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="1218.56" ytl="456.88" xbr="1278.10" ybr="541.56" z_order="0"/>
+  </image>
+  <image id="52" name="5_2025_09_27__12_31_32.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="828.47" ytl="479.73" xbr="1267.69" ybr="720.00" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="892.15" ytl="68.07" xbr="970.47" ybr="146.55" z_order="0"/>
+  </image>
+  <image id="53" name="5_2025_09_27__21_47_37.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="829.13" ytl="478.68" xbr="1278.14" ybr="720.00" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="653.16" ytl="99.51" xbr="996.70" ybr="317.57" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="924.95" ytl="100.59" xbr="990.61" ybr="163.54" z_order="0"/>
+  </image>
+  <image id="54" name="6_2025_09_24__20_14_38.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="681.24" ytl="94.86" xbr="775.88" ybr="158.33" z_order="0"/>
+  </image>
+  <image id="55" name="6_2025_09_25__13_11_18.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="141.15" ytl="265.42" xbr="230.60" ybr="322.13" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="666.75" ytl="98.24" xbr="719.68" ybr="134.20" z_order="0"/>
+  </image>
+  <image id="56" name="6_2025_09_25__13_21_19.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="654.46" ytl="101.04" xbr="717.45" ybr="142.28" z_order="0"/>
+  </image>
+  <image id="57" name="6_2025_09_26__03_12_49.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="171.40" ytl="277.40" xbr="228.77" ybr="314.48" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="193.70" ytl="300.89" xbr="317.51" ybr="356.90" z_order="0"/>
+  </image>
+  <image id="58" name="6_2025_09_26__04_02_54.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="153.18" ytl="263.43" xbr="226.08" ybr="317.34" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="657.28" ytl="116.08" xbr="730.58" ybr="168.96" z_order="0"/>
+  </image>
+  <image id="59" name="6_2025_09_27__07_41_04.jpg" width="1280" height="720">
+    <box label="sitting on bed" occluded="0" source="manual" xtl="211.77" ytl="221.27" xbr="358.62" ybr="373.17" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="677.66" ytl="98.66" xbr="790.55" ybr="166.11" z_order="0"/>
+  </image>
+  <image id="60" name="6_2025_09_27__11_06_29.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="656.30" ytl="107.04" xbr="740.39" ybr="157.18" z_order="0"/>
+  </image>
+  <image id="61" name="6_2025_09_27__19_42_34.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="158.91" ytl="267.52" xbr="279.91" ybr="354.98" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="685.59" ytl="75.41" xbr="762.59" ybr="196.55" z_order="0"/>
+  </image>
+  <image id="62" name="6_2025_09_27__20_17_39.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="170.60" ytl="271.97" xbr="287.23" ybr="347.27" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="660.01" ytl="86.17" xbr="727.46" ybr="190.91" z_order="0"/>
+  </image>
+  <image id="63" name="6_2025_09_27__20_22_40.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="173.68" ytl="269.56" xbr="291.07" ybr="349.08" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="662.72" ytl="82.57" xbr="728.02" ybr="148.90" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="657.93" ytl="83.03" xbr="731.63" ybr="174.76" z_order="0"/>
+  </image>
+  <image id="64" name="6_2025_09_28__04_28_35.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="696.46" ytl="118.94" xbr="779.61" ybr="174.81" z_order="0"/>
+  </image>
+  <image id="65" name="7_2025_09_25__04_50_30.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="449.29" ytl="75.07" xbr="736.06" ybr="229.46" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="1240.31" ytl="370.80" xbr="1280.00" ybr="454.02" z_order="0"/>
+  </image>
+  <image id="66" name="7_2025_09_27__07_21_03.jpg" width="1280" height="720">
+    <box label="sitting on chair" occluded="0" source="manual" xtl="928.24" ytl="174.78" xbr="1175.66" ybr="507.63" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="473.33" ytl="54.23" xbr="710.68" ybr="226.78" z_order="0"/>
+  </image>
+  <image id="67" name="7_2025_09_27__13_56_51.jpg" width="1280" height="720">
+    <box label="sitting on chair" occluded="0" source="manual" xtl="914.36" ytl="226.03" xbr="1227.68" ybr="483.75" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="478.69" ytl="54.91" xbr="714.45" ybr="262.94" z_order="0"/>
+  </image>
+  <image id="68" name="8_2025_09_25__09_11_01.jpg" width="1280" height="720"/>
+  <image id="69" name="8_2025_09_26__15_59_19.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="84.90" ytl="330.57" xbr="223.32" ybr="454.14" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="545.65" ytl="48.34" xbr="641.88" ybr="126.30" z_order="0"/>
+  </image>
+  <image id="70" name="8_2025_09_27__05_50_48.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="572.11" ytl="39.85" xbr="626.78" ybr="86.28" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="161.57" ytl="305.72" xbr="221.42" ybr="358.52" z_order="0"/>
+  </image>
+  <image id="71" name="8_2025_09_27__11_11_25.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="624.48" ytl="19.14" xbr="678.71" ybr="71.74" z_order="0"/>
+  </image>
+  <image id="72" name="8_2025_09_27__13_16_38.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="67.57" ytl="331.55" xbr="371.54" ybr="620.42" z_order="0"/>
+  </image>
+  <image id="73" name="8_2025_09_28__07_03_46.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="108.48" ytl="333.94" xbr="406.57" ybr="665.95" z_order="0"/>
+    <box label="sitting on bed" occluded="0" source="manual" xtl="683.94" ytl="0.00" xbr="783.37" ybr="76.19" z_order="0"/>
+    <box label="food tray" occluded="0" source="manual" xtl="714.46" ytl="71.41" xbr="826.32" ybr="131.57" z_order="0"/>
+  </image>
+  <image id="74" name="9_2025_09_23__23_52_27.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="1140.50" ytl="322.13" xbr="1274.60" ybr="496.39" z_order="0"/>
+  </image>
+  <image id="75" name="9_2025_09_24__12_53_47.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="664.62" ytl="6.06" xbr="921.83" ybr="134.36" z_order="0"/>
+  </image>
+  <image id="76" name="9_2025_09_24__21_09_36.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="847.48" ytl="7.96" xbr="942.80" ybr="66.60" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="1238.26" ytl="328.36" xbr="1280.00" ybr="445.96" z_order="0"/>
+  </image>
+  <image id="77" name="9_2025_09_25__08_25_46.jpg" width="1280" height="720">
+    <box label="sitting on bed" occluded="0" source="manual" xtl="908.57" ytl="372.52" xbr="1205.19" ybr="592.67" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="659.40" ytl="6.59" xbr="929.20" ybr="132.12" z_order="0"/>
+  </image>
+  <image id="78" name="9_2025_09_26__10_23_41.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="903.14" ytl="11.47" xbr="949.54" ybr="59.57" z_order="0"/>
+  </image>
+  <image id="79" name="9_2025_09_27__20_32_28.jpg" width="1280" height="720">
+    <box label="lying down on bed" occluded="0" source="manual" xtl="851.05" ytl="16.50" xbr="931.56" ybr="72.91" z_order="0"/>
+    <box label="lying down on bed" occluded="0" source="manual" xtl="988.52" ytl="358.12" xbr="1235.09" ybr="615.12" z_order="0"/>
+  </image>
+</annotations>
