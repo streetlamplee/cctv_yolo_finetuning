@@ -3,12 +3,14 @@ import numpy as np
 import onnxruntime
 import yaml
 import os
+from pathlib import Path
 
 # --- 설정 값 ---
 IMG_SIZE = 224
 CONF_THRESHOLD = 0.3
 IOU_THRESHOLD = 0.5
-DATA_YAML_PATH = './data/data.yaml'
+ROOT_DIR = Path(__file__).parent.parent.parent
+DATA_YAML_PATH = f'{ROOT_DIR}/data/data.yaml'
 
 def load_class_names(yaml_path):
     """ YAML 파일에서 클래스 이름을 로드합니다. """
@@ -140,8 +142,8 @@ def main(model_path, image_path):
 if __name__ == '__main__':
     # --- 사용 예시 ---
     # 아래 경로들을 실제 모델과 이미지 경로로 변경하여 사용하세요.
-    model_path = "best_int8_quant.onnx"  # 예시 경로
-    image_path = "data/images/Test/frames_00010000095000000_00000006.jpg"      # 예시 경로
+    model_path = "/home/user/PycharmProjects/cctv_yolo_finetuning/src/quantize/best_int8_quant.onnx"  # 예시 경로
+    image_path = "/home/user/PycharmProjects/cctv_yolo_finetuning/data/images/Validation/10_2025_09_27__14_41_44.jpg"      # 예시 경로
 
     # 파일 존재 여부 확인
     if not os.path.exists(model_path):

@@ -6,6 +6,8 @@ import yaml
 import cv2
 import numpy as np
 import glob
+from src.quantize.yoloCalibDataset import YOLOv8CalibrationDataReader
+
 
 
 
@@ -72,20 +74,41 @@ def quantize_onnx_model(onnx_model_path, data_yaml_path, img_size=224):
     quantized_output_path = onnx_model_path.replace('.onnx', '.quant.int8.onnx')
 
     # 보정 데이터 리더 생성
-    calibration_data_reader = YOLOv8DataReader(data_yaml_path, img_size=img_size)
+    # calibration_data_reader = YOLOv8DataReader(data_yaml_path, img_size=img_size)
+    calibration_data_reader = YOLOv8CalibrationDataReader(
+        yaml_path=data_yaml_path,
+        img_size=img_size
+    )
 
-    # 정적 양자화 실행
+    print("ONNX Runtime으로 양자화를 수행합니다 (시간이 다소 걸릴 수 있습니다)...")
     quantize_static(
         model_input=onnx_model_path,
         model_output=quantized_output_path,
         calibration_data_reader=calibration_data_reader,
-        quant_format=onnxruntime.quantization.QuantFormat.QDQ,  # QDQ는 정확도, QOperator는 성능에 유리
+        quant_format=onnxruntime.quantization.QuantFormat.QDQ,  # QDQ 형식이 호환성이 좋음
         activation_type=QuantType.QInt8,
         weight_type=QuantType.QInt8,
-        per_channel=True,
+        nodes_to_exclude=['/model.22/Concat_3', '/model.22/Split', '/model.22/Sigmoid'
+                                                                   '/model.22/dfl/Reshape', '/model.22/dfl/Transpose',
+                          '/model.22/dfl/Softmax',
+                          '/model.22/dfl/conv/Conv', '/model.22/dfl/Reshape_1', '/model.22/Slice_1',
+                          '/model.22/Slice', '/model.22/Add_1', '/model.22/Sub', '/model.22/Div_1',
+                          '/model.22/Concat_4', '/model.22/Mul_2', '/model.22/Concat_5'],
+        per_channel=False,
         reduce_range=True,
-        nodes_to_exclude=[],
     )
+    # # 정적 양자화 실행
+    # quantize_static(
+    #     model_input=onnx_model_path,
+    #     model_output=quantized_output_path,
+    #     calibration_data_reader=calibration_data_reader,
+    #     quant_format=onnxruntime.quantization.QuantFormat.QDQ,  # QDQ는 정확도, QOperator는 성능에 유리
+    #     activation_type=QuantType.QInt8,
+    #     weight_type=QuantType.QInt8,
+    #     per_channel=True,
+    #     reduce_range=True,
+    #     nodes_to_exclude=[],
+    # )
 
     print(f"INT8 양자화가 완료되었습니다. 모델이 '{quantized_output_path}'에 저장되었습니다.")
     return quantized_output_path
