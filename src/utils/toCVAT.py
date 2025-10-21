@@ -3,6 +3,11 @@ import cv2
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import shutil
+import random
+from pathlib import Path
+from src.predict import main as predict
+
+ROOT_DIR = Path(__file__).parent.parent.parent
 
 def create_cvat_xml(image_dir, label_dir, class_names, output_xml):
     """
@@ -104,6 +109,24 @@ def create_cvat_xml(image_dir, label_dir, class_names, output_xml):
 
     print(f"변환 완료! 총 {image_id_counter}개의 이미지에 대한 라벨이 '{output_xml}' 파일에 저장되었습니다.")
 
+def make_data_set(iter:int = 100):
+    os.makedirs(os.path.join(ROOT_DIR, "need_check/images"), exist_ok=True)
+    os.makedirs(os.path.join(ROOT_DIR, "need_check/labels"), exist_ok=True)
+    image_list = os.listdir(os.path.join(ROOT_DIR, "1002_data"))
+    image_name_list = [x for x in image_list if x.endswith(".jpg")]
+    image_list = [os.path.join(ROOT_DIR, "1002_data", x) for x in image_list if x.endswith(".jpg")]
+    for _ in range(iter+1):
+        i = random.randint(0, len(image_list))
+        image_name = image_name_list[i]
+        label_name = image_name.replace(".jpg",".txt")
+        image_path = image_list[i]
+        label_path = image_path.replace(".jpg", ".txt")
+        predict(image_path)
+
+        shutil.move(image_path, os.path.join(ROOT_DIR, "data/need_check/images", image_name))
+        shutil.move(label_path, os.path.join(ROOT_DIR, "data/need_check/labels", label_name))
+
+
 
 if __name__ == '__main__':
     #
@@ -114,7 +137,7 @@ if __name__ == '__main__':
     #     elif l.endswith(".txt"):
     #         shutil.move(os.path.join("/home/user/PycharmProjects/cctv_yolo_finetuning/data/need_check", l), os.path.join("/home/user/PycharmProjects/cctv_yolo_finetuning/data/need_check", "labels", l))
 
-
+    make_data_set(50)
 
     # --- 사용자 설정 영역 ---
 
@@ -137,7 +160,7 @@ if __name__ == '__main__':
 
 
     # 3. 결과로 나올 XML 파일의 이름을 지정하세요.
-    output_xml = 'annotations.xml'
+    output_xml = os.path.join(ROOT_DIR, 'data/need_check_annotations.xml')
 
     # --- 스크립트 실행 ---
     create_cvat_xml(image_dir, label_dir, class_names, output_xml)
