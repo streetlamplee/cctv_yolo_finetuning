@@ -1,70 +1,78 @@
-# Project Overview
+# Gemini Project Analysis: YOLOv8 Fine-Tuning and Quantization
 
-This project is set up for fine-tuning a YOLOv8n object detection model. The primary goal is to adapt the pre-trained `yolov8n` model to a custom dataset, with a specific input image size of 224x224 pixels. The dataset is expected to be exported from CVAT in YOLO format.
+## 1. Project Overview
 
-**Key Technologies:**
-*   **Python**: The main programming language.
-*   **Ultralytics YOLOv8**: The framework used for model training and inference.
+This project is a complete pipeline for fine-tuning a `yolov8n` object detection model on a custom dataset. The process includes training, exporting the model to ONNX format, and performing post-training static INT8 quantization.
 
-**Architecture:**
-The project consists of a `main.py` script that orchestrates the fine-tuning process. It loads the `yolov8n` model, configures training parameters (including image size and dataset path), and initiates the training. The dataset configuration is managed via `dataset.yaml`.
+## 2. Core Technologies
 
-# Building and Running
+- **Model Framework**: `ultralytics` (YOLOv8)
+- **Inference & Quantization**: `onnx`, `onnxruntime`, `onnxruntime-gpu`
+- **Data Handling**: `opencv-python`, `pyyaml`
+- **ONNX Optimization**: `onnxslim`
 
-## 1. Install Dependencies
+## 3. Directory and File Structure
 
-Ensure you have Python installed. Then, install the required libraries using `pip`:
+- **/src**: Contains the primary source code.
+  - `main.py`: The main script that orchestrates the entire train-export-quantize pipeline.
+  - `predict.py`: A script for running inference using a trained `.pt` model.
+  - **/src/quantize**: Sub-package for model quantization.
+    - `quantize_pt.py`: A standalone script to convert a `.pt` model to a quantized INT8 ONNX model.
+    - `yoloCalibDataset.py`: A custom data reader that provides calibration data for static quantization.
+- **/data**: Should contain the `dataset.yaml` file which defines dataset paths and class information.
+- **/runs/detect**: Default output directory for YOLOv8 training, containing trained models (`best.pt`) and logs.
+- **/raw_data**: Contains scripts for initial data gathering and preparation.
+- `requirements.txt`: Lists all Python dependencies.
 
+## 4. Key Scripts and Workflow
+
+### 4.1. Main Pipeline: `src/main.py`
+
+This is the primary entry point for the full workflow. It performs the following steps sequentially:
+
+1.  **Load Model**: Loads the pre-trained `yolov8n.pt` model.
+2.  **Fine-Tune**: Trains the model on the custom dataset defined in `data/data.yaml`.
+    - Key parameters: `imgsz=224`, `epochs=1`, `batch=16`.
+    - The best performing model is saved as `best.pt` inside the `runs/detect/yolov8n_finetune/weights/` directory.
+3.  **Export to ONNX**: The `best.pt` model is converted to the standard FP32 ONNX format.
+4.  **Quantize to INT8**: The FP32 ONNX model is quantized to INT8 using static quantization.
+    - It uses `YOLOv8CalibrationDataReader` from `src/quantize/yoloCalibDataset.py` to feed calibration data to the quantizer.
+
+**To Run:**
 ```bash
-pip install -r requirements.txt
+python src/main.py
+```
+*(Requires `data/data.yaml` to be correctly configured)*
+
+### 4.2. Inference: `src/predict.py`
+
+This script is used to run inference on images using a trained PyTorch (`.pt`) model.
+
+1.  **Finds Model**: It automatically locates the most recently modified `best.pt` file within the `/runs/detect` directory.
+2.  **Loads Model**: Initializes a `YOLO` object with the found model path.
+3.  **Performs Inference**: Runs the model on a specified input image.
+4.  **Saves Results**: Saves the detection results (class ID, normalized xywh) to a `.txt` file with the same name as the image.
+5.  **Visualize**: Optionally displays the image with bounding boxes drawn on it.
+
+**To Run (example from script):**
+The script is currently hardcoded to process images in the `1002_data/raw_data` folder.
+
+### 4.3. Standalone Quantization: `src/quantize/quantize_pt.py`
+
+This script provides a focused tool for converting a fine-tuned `.pt` model directly to a quantized INT8 ONNX model. This is useful for re-quantizing a model without re-training.
+
+1.  **Configuration**: Requires manual setting of paths for the input `.pt` model and the `dataset.yaml`.
+2.  **PT -> FP32 ONNX**: Converts the PyTorch model to FP32 ONNX format.
+3.  **FP32 ONNX -> INT8 ONNX**: Performs static quantization using the `YOLOv8CalibrationDataReader`.
+
+**To Run:**
+```bash
+# 1. Update PT_PATH and YAML_PATH in the script
+# 2. Execute the script
+python src/quantize/quantize_pt.py
 ```
 
-## 2. Prepare Your Dataset
+## 5. Configuration
 
-The project expects the dataset to be in YOLO format, typically exported from tools like CVAT.
-
-1.  **Download Data from CVAT**: Export your annotated dataset from CVAT in "YOLO" format. This usually results in a directory structure like:
-    ```
-    your_dataset_name/
-    ├── images/
-    │   ├── train/
-    │   └── valid/
-    └── labels/
-        ├── train/
-        └── valid/
-    ```
-2.  **Update `dataset.yaml`**:
-    The `dataset.yaml` file in the project root needs to be updated to point to your dataset's image directories and define your class names and count.
-    *   `train`: Path to your training images (e.g., `./your_dataset_name/images/train`).
-    *   `val`: Path to your validation images (e.g., `./your_dataset_name/images/valid`).
-    *   `nc`: The total number of classes in your dataset.
-    *   `names`: A list of your class names, in the correct order corresponding to their IDs.
-
-    **Example `dataset.yaml` structure:**
-    ```yaml
-    train: /path/to/your/cvat_export/images/train
-    val: /path/to/your/cvat_export/images/val
-
-    nc: 3 # Example: 3 classes
-    names: ['person', 'car', 'bicycle'] # Example class names
-    ```
-
-## 3. Run Training
-
-Once dependencies are installed and `dataset.yaml` is correctly configured, you can start the fine-tuning process by running the `main.py` script:
-
-```bash
-python main.py
-```
-
-The training will use the `yolov8n` model, an input image size of 224x224, and the dataset defined in `dataset.yaml`. Training results (weights, plots, etc.) will be saved in a `runs/detect/yolov8n_finetune` directory by default.
-
-# Development Conventions
-
-*   **YOLOv8 Framework**: All object detection tasks leverage the Ultralytics YOLOv8 library.
-*   **Configuration**: Dataset paths and class information are managed through `dataset.yaml`.
-*   **Image Size**: The model is configured to train with an input image size of 224x224.
-
-## Disclaimer
-
-This README.md is written by gemini
+- **`data/data.yaml`**: This is the most critical configuration file. It **must** be correctly set up with paths to `train` and `val` image directories, the number of classes (`nc`), and a list of class `names`. The paths in this file are relative to the file itself.
+- **Image Size**: The project consistently uses an image size of `224x224` for training, export, and quantization.

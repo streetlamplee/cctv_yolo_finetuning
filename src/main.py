@@ -17,7 +17,7 @@ class YOLOv8DataReader(CalibrationDataReader):
     data.yaml 파일에 명시된 검증 데이터셋을 사용합니다.
     """
 
-    def __init__(self, data_yaml_path, batch_size=1, img_size=224):
+    def __init__(self, data_yaml_path, batch_size=8, img_size=224):
         self.img_size = img_size
         self.batch_size = batch_size
 
@@ -133,7 +133,7 @@ def run_yolov8_finetuning(data_yaml='./data/data.yaml'):
     model = YOLO('yolov8n.pt')
 
     # 모델 파인튜닝
-    results = model.train(data=data_yaml, imgsz=224, epochs=1, batch=16, project='../runs/detect', name='yolov8n_finetune', exist_ok=True)
+    results = model.train(data=data_yaml, imgsz=224, epochs=500, batch=16, project='../runs/detect', name='yolov8n_finetune', exist_ok=True)
     print("YOLOv8n 모델 파인튜닝이 완료되었습니다.")
 
     # 가장 성능 좋은 모델(.pt) 경로 저장
