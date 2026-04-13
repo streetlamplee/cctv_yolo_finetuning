@@ -21,7 +21,7 @@ if __name__ == '__main__':
     # --- 2. PT 모델을 FP32 ONNX로 변환 ---
     print(f"'{PT_PATH}' 모델을 ONNX FP32 형식으로 변환합니다...")
     model = YOLO(PT_PATH)
-    # opset 버전을 12로 지정하여 호환성을 높입니다.
+
     model.export(format='onnx', imgsz=IMG_SIZE, opset=13)
     # export된 파일 이름을 명확하게 변경
     exported_name = PT_PATH.replace('.pt', '.onnx')

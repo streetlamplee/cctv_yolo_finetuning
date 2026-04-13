@@ -76,3 +76,47 @@ python src/quantize/quantize_pt.py
 
 - **`data/data.yaml`**: This is the most critical configuration file. It **must** be correctly set up with paths to `train` and `val` image directories, the number of classes (`nc`), and a list of class `names`. The paths in this file are relative to the file itself.
 - **Image Size**: The project consistently uses an image size of `224x224` for training, export, and quantization.
+
+---
+
+## 6. Prompt for AI Assistant
+
+**Objective:** Your primary goal is to assist in the development, maintenance, and enhancement of this YOLOv8 fine-tuning project. You must act as an expert in machine learning, data processing, and software engineering.
+
+**Core Instructions:**
+
+1.  **Understand First, Act Second:** Before making any changes, thoroughly analyze the relevant files (`main.py`, `predict.py`, `quantize_pt.py`, `data/data.yaml`, etc.) to understand the existing workflow, parameters, and coding conventions.
+2.  **Configuration is Key:** Always be mindful of the `data/data.yaml` file. Any task related to training or data requires you to first verify its contents (paths, number of classes, class names). Paths within this file are relative to its location.
+3.  **Follow Existing Patterns:** When adding new features or modifying code, strictly adhere to the existing code style, structure, and logic. For example, if adding a new data processing step, model it after the existing pipeline in `main.py`.
+4.  **Dependency Management:** Before using a new library, check if it is already listed in `requirements.txt`. If not, you must add it to maintain project reproducibility.
+5.  **Path Management:** Be extremely careful with file paths.
+    - The project uses both absolute and relative paths. Understand the context for each.
+    - The `runs/detect` directory is dynamically created by the `ultralytics` library. Your code must be able to locate the latest training results within this directory (e.g., by finding the most recent `best.pt` file).
+6.  **Verify Your Work:** After any modification, you are responsible for verifying that the changes work as expected and have not introduced regressions. This may involve:
+    - Running the modified script (`main.py`, `predict.py`, etc.).
+    - Adding temporary print statements or logging to trace the execution flow.
+    - If you add a new feature, you should also add a corresponding test case in the `src/test` directory.
+
+**Common Tasks & How to Approach Them:**
+
+*   **"Train the model with new data."**
+    1.  Ask the user for the location of the new `dataset.yaml` or the new image/label directories.
+    2.  Update `data/data.yaml` accordingly.
+    3.  Verify the paths and class information are correct.
+    4.  Execute the main training pipeline: `python src/main.py`.
+
+*   **"Change a training parameter (e.g., image size, epochs)."**
+    1.  Locate the training call (`model.train(...)`) in `src/main.py`.
+    2.  Modify the specified parameter (e.g., `imgsz`, `epochs`).
+    3.  Remember that changing `imgsz` will require changes in the `export` and `quantize` steps as well. Ensure consistency across the entire pipeline.
+
+*   **"Run inference on a new image."**
+    1.  Identify the `predict.py` script as the tool for this.
+    2.  Locate the latest trained model (`best.pt`) in the `runs/detect` directory.
+    3.  Modify `predict.py` to point to the new input image.
+    4.  Execute the script: `python src/predict.py`.
+
+*   **"Debug a problem in the quantization process."**
+    1.  Focus your analysis on `src/main.py` (the quantization part) and the `src/quantize/` sub-package.
+    2.  Pay close attention to `yoloCalibDataset.py`, as calibration data is a common source of errors. Ensure it's reading images correctly from the `val` set specified in `data/data.yaml`.
+    3.  Use `src/quantize/quantize_pt.py` for isolated testing of the quantization step.

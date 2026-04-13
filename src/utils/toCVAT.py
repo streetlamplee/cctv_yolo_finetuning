@@ -109,22 +109,23 @@ def create_cvat_xml(image_dir, label_dir, class_names, output_xml):
 
     print(f"변환 완료! 총 {image_id_counter}개의 이미지에 대한 라벨이 '{output_xml}' 파일에 저장되었습니다.")
 
-def make_data_set(iter:int = 100):
-    os.makedirs(os.path.join(ROOT_DIR, "need_check/images"), exist_ok=True)
-    os.makedirs(os.path.join(ROOT_DIR, "need_check/labels"), exist_ok=True)
-    image_list = os.listdir(os.path.join(ROOT_DIR, "1002_data"))
+def make_data_set(raw_data_folder:str, iter:int = 100):
+    os.makedirs(os.path.join(ROOT_DIR, "data/need_check/images"), exist_ok=False)
+    os.makedirs(os.path.join(ROOT_DIR, "data/need_check/labels"), exist_ok=False)
+    image_list = os.listdir(os.path.join(ROOT_DIR, raw_data_folder))
     image_name_list = [x for x in image_list if x.endswith(".jpg")]
-    image_list = [os.path.join(ROOT_DIR, "1002_data", x) for x in image_list if x.endswith(".jpg")]
-    for _ in range(iter+1):
+    image_list = [os.path.join(ROOT_DIR, raw_data_folder, x) for x in image_list if x.endswith(".jpg")]
+    for _ in range(iter):
         i = random.randint(0, len(image_list))
         image_name = image_name_list[i]
         label_name = image_name.replace(".jpg",".txt")
         image_path = image_list[i]
         label_path = image_path.replace(".jpg", ".txt")
         predict(image_path)
-
-        shutil.move(image_path, os.path.join(ROOT_DIR, "data/need_check/images", image_name))
-        shutil.move(label_path, os.path.join(ROOT_DIR, "data/need_check/labels", label_name))
+        if os.path.exists(image_path):
+            shutil.move(image_path, os.path.join(ROOT_DIR, "data/need_check/images", image_name))
+            if os.path.exists(label_path):
+                shutil.move(label_path, os.path.join(ROOT_DIR, "data/need_check/labels", label_name))
 
 
 
@@ -137,13 +138,13 @@ if __name__ == '__main__':
     #     elif l.endswith(".txt"):
     #         shutil.move(os.path.join("/home/user/PycharmProjects/cctv_yolo_finetuning/data/need_check", l), os.path.join("/home/user/PycharmProjects/cctv_yolo_finetuning/data/need_check", "labels", l))
 
-    make_data_set(50)
+    make_data_set("1121_data", 100)
 
     # --- 사용자 설정 영역 ---
 
     # 1. 이미지와 라벨이 있는 폴더 경로를 지정하세요.
-    image_dir = '/home/user/PycharmProjects/cctv_yolo_finetuning/data/need_check/images'  # 예: './dataset/images'
-    label_dir = '/home/user/PycharmProjects/cctv_yolo_finetuning/data/need_check/labels'  # 예: './dataset/labels'
+    image_dir = '/home/user/PycharmProjects/cctv_yolo_finetuning/data/02_interim/images'  # 예: './dataset/images'
+    label_dir = '/home/user/PycharmProjects/cctv_yolo_finetuning/data/02_interim/labels'  # 예: './dataset/labels'
 
     # 2. 클래스 이름을 순서대로(class_id 0부터) 입력하세요.
     class_names = ['standing',               # 0
@@ -160,7 +161,7 @@ if __name__ == '__main__':
 
 
     # 3. 결과로 나올 XML 파일의 이름을 지정하세요.
-    output_xml = os.path.join(ROOT_DIR, 'data/need_check_annotations.xml')
+    output_xml = os.path.join(ROOT_DIR, 'data/need_check/annotations.xml')
 
     # --- 스크립트 실행 ---
     create_cvat_xml(image_dir, label_dir, class_names, output_xml)

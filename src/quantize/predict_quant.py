@@ -7,7 +7,7 @@ from pathlib import Path
 
 # --- 설정 값 ---
 IMG_SIZE = 224
-CONF_THRESHOLD = 0.3
+CONF_THRESHOLD = 0.4
 IOU_THRESHOLD = 0.5
 ROOT_DIR = Path(__file__).parent.parent.parent
 DATA_YAML_PATH = f'{ROOT_DIR}/data/data.yaml'
@@ -142,15 +142,17 @@ def main(model_path, image_path):
 if __name__ == '__main__':
     # --- 사용 예시 ---
     # 아래 경로들을 실제 모델과 이미지 경로로 변경하여 사용하세요.
-    model_path = "/home/user/PycharmProjects/cctv_yolo_finetuning/src/quantize/best_int8_quant.onnx"  # 예시 경로
-    image_path = "/home/user/PycharmProjects/cctv_yolo_finetuning/data/images/Validation/10_2025_09_27__14_41_44.jpg"      # 예시 경로
+    # model_path = "/home/user/PycharmProjects/cctv_yolo_finetuning/src/best.quant.int8.onnx"
+    model_path = "/media/user/F7F0-F779/CCTVapp/resource/yolov8n.quant.onnx"
+    for i in os.listdir("/home/user/PycharmProjects/cctv_yolo_finetuning/data/images/Validation"):
+        image_path = os.path.join("/home/user/PycharmProjects/cctv_yolo_finetuning/data/images/Validation", i)
 
-    # 파일 존재 여부 확인
-    if not os.path.exists(model_path):
-        print(f"오류: 모델 파일을 찾을 수 없습니다: {model_path}")
-        print("main.py를 실행하여 모델을 먼저 생성하거나, 경로를 올바르게 지정해주세요.")
-    elif not os.path.exists(image_path):
-        print(f"오류: 이미지 파일을 찾을 수 없습니다: {image_path}")
-    else:
-        # 함수에 직접 인자를 전달하여 호출
-        main(model_path, image_path)
+        # 파일 존재 여부 확인
+        if not os.path.exists(model_path):
+            print(f"오류: 모델 파일을 찾을 수 없습니다: {model_path}")
+            print("main.py를 실행하여 모델을 먼저 생성하거나, 경로를 올바르게 지정해주세요.")
+        elif not os.path.exists(image_path):
+            print(f"오류: 이미지 파일을 찾을 수 없습니다: {image_path}")
+        else:
+            # 함수에 직접 인자를 전달하여 호출
+            main(model_path, image_path)

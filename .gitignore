@@ -323,7 +323,7 @@ pyrightconfig.json
 
 
 data/
-1002_data/
+*_data/
 *.pt
 *.onnx
 *.pth
